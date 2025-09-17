@@ -6,9 +6,11 @@
 //
 
 #include <stdio.h>
+#include <unistd.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+
+int main() {
+    char *header = "HTTP/1.1 200 OK";
+    write(1, header, 15);
     return 0;
 }
